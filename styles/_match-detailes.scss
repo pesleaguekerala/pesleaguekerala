@@ -1,0 +1,41 @@
+#match-detailes{
+    width: 100%;
+    background-color: rgb(206, 206, 206);
+    
+    .match-detailes-contents{
+        max-width: 275px;
+        margin: 0px auto;
+        padding: 20px 0;
+        
+        
+        h2{
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: capitalize;
+
+            @include respond-above(sm){
+                font-size: 28px;
+            }
+        }
+        .match-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            margin: 0 auto;
+          label{
+              font-size: 14px;
+
+              &.head{
+                  color: $primary-color-tone;
+                  font-size: 22px;
+                  text-transform: capitalize;
+                  text-align: left;
+              }
+          }
+          .deadline{
+            margin: 10px 0 20px;
+          }
+        }
+    }
+}

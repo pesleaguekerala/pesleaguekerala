@@ -1,0 +1,53 @@
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 2px 1px 10px $dark;
+    z-index: 999;
+    .header-contents{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: $primary-color-tone;
+
+        .menu-bar{
+            .fa{
+                color: $light;
+                font-size: 22px;
+                cursor: pointer;
+
+                @include respond-above(sm){
+                    font-size: 26px;
+                }
+            }
+        }
+        .logo{
+            img{
+                width: 90px;
+
+                @include respond-above(sm){
+                    width: 110px;
+                }
+            }
+        }
+        .social-media{
+            .fab{
+                font-size: 28px;
+                color: $light;
+                cursor: pointer;
+                transition: color ease .1s;
+
+                @include respond-above(sm){
+                    font-size: 30px;
+                }
+
+                &:hover{
+                    color:#e1306c;
+                }
+
+                
+            }
+        }
+    }
+}

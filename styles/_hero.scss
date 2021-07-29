@@ -1,0 +1,132 @@
+.hero{
+    position: relative;
+    width: 100%;
+    background-color: $primary-color-tone;
+    // clip-path: polygon(50% 0%, 100% 0, 100% 60%, 50% 100%, 0% 60%, 0 0);
+    // clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 100%, 0 96%, 0 0);
+    z-index: -1;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(/images/messiRonoPoster.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        opacity: .1;
+    }
+
+    @include respond-above(sm){
+        &::after{
+            content: '';
+            position: absolute;
+            background-image: url(/images/bg-poster.jpg);
+        }
+    }
+    .hero-contents{
+        color: $light;
+        margin-top: -5px;
+
+        @include respond-above(sm){
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        // h1{
+        //     color: $dark;
+        //     text-align: center;
+        // }
+        .col-2{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 70px;
+
+            &.col-sec-1{
+                padding-top: 160px;
+            }
+
+            &.col{
+                padding-bottom: 60px;
+            }
+
+            
+            .team{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 0 20px;
+                img{
+                    width:70px;
+
+                    @include respond-above(sm){
+                        width: 110px;
+                    }
+
+                }
+
+                .team-title{
+                    h2{
+                        font-size: 16px;
+
+                        @include respond-above(sm){
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            .vs{
+                h2{
+                    font-size: 30px;
+
+                    @include respond-above(sm){
+                        font-size: 34px;
+                    }
+                }
+            }
+        }
+        // hr{
+        //     height: 3px;
+        //     margin: 4px 10px;
+        // }
+    }
+    
+}
+.hero-btn{
+    position: absolute;
+    bottom: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    scroll-behavior: smooth;
+
+    @include respond-above(sm){
+        top: 20%;
+    }
+
+    a{
+        color: $light;
+        text-decoration: none;
+
+        @include respond-above(sm){
+            font-size: 20px;
+        }
+
+        &:hover{
+            text-decoration: underline;
+        }
+
+        &:focus{
+            color: $secondary-color-tone;
+        }
+
+        
+    }
+}
