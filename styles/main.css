@@ -535,20 +535,7 @@ footer {
   width: 100%;
 }
 
-.point-table-container {
-  margin: 80px auto 0;
-}
-
-@media (min-width: 960px) {
-  .point-table-container {
-    margin: 200px auto 0;
-  }
-}
-
-.point-table-container h2 {
-  font-weight: 600;
-  text-transform: capitalize;
-  text-align: center;
-  padding: 0 0 30px;
+.registration {
+  margin-top: 100px;
 }
 /*# sourceMappingURL=main.css.map */
